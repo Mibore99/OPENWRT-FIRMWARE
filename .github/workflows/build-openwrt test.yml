@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/Mibore99/openwrt-1
+  REPO_URL: https://github.com/Mibore99/openwrt
   REPO_BRANCH: openwrt-22.03
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: r2s_cpufrequency.config
