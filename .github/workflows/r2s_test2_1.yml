@@ -32,7 +32,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  OPENWRT_NAME: r2s-rename
+  OPENWRT_NAME: r2s
 jobs:
   build:
     runs-on: ubuntu-20.04
