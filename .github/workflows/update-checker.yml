@@ -30,29 +30,29 @@ jobs:
       id: getHash
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH .
-        echo "name=commitHash=$(git rev-parse HEAD)" >> $GITHUB_STATE
+        echo "::set-output name=commitHash::$(git rev-parse HEAD)"
 
     - name: Compare Commit Hash
       id: cacheHash
-      uses: actions/cache@v3
+      uses: actions/cache@v2
       with:
         path: .commitHash
-        key: HEAD-${{ hashFiles('**/lockfiles') }}
+        key: HEAD-${{ steps.getHash.outputs.commitHash }}
 
     - name: Save New Commit Hash
-      if: steps.cache.outputs.cache-hit != 'true'
+      if: steps.cacheHash.outputs.cache-hit != 'true'
       run: |
-        echo ${{ hashFiles('**/lockfiles') }} | tee .commitHash
+        echo ${{ steps.getHash.outputs.commitHash }} | tee .commitHash
 
     - name: Trigger build
-      if: steps.cache.outputs.cache-hit != 'true'
-      uses: peter-evans/repository-dispatch@v2
+      if: steps.cacheHash.outputs.cache-hit != 'true'
+      uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
         event-type: Source Code Update
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 10
+        retain_days: 1
         keep_minimum_runs: 1
