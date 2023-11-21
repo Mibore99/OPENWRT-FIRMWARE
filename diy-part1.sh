@@ -15,6 +15,7 @@
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld.git;main' >>feeds.conf.default
+svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #rm -rf package/boot/uboot-rockchip/patches
 #svn export https://github.com/friendlyarm/friendlywrt/trunk/package/boot/uboot-rockchip/patches
