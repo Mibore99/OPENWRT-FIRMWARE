@@ -15,7 +15,7 @@
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld.git;main' >>feeds.conf.default
-echo 'src-git mosdns https://github.com/sbwml/luci-app-mosdns.git^v5' >>feeds.conf.default
+echo 'src-git mosdns https://github.com/sbwml/luci-app-mosdns.git;v5' >>feeds.conf.default
 #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #rm -rf package/boot/uboot-rockchip/patches
