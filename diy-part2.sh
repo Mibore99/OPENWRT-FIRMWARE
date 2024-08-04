@@ -16,5 +16,5 @@
 #for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
 #  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
 #done
-curl -L -o feeds/packages/lang/golang/golang/Makefile https://github.com/coolsnowwolf/packages/raw/master/lang/golang/golang/Makefile
+#curl -L -o feeds/packages/lang/golang/golang/Makefile https://github.com/coolsnowwolf/packages/raw/master/lang/golang/golang/Makefile
 
