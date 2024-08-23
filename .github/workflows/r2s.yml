@@ -35,9 +35,26 @@ env:
   OPENWRT_NAME: r2s
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
+    
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Add GCC PPA and install latest GCC
+      run: |
+        sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+        sudo apt-get update
+        sudo apt-get install -y gcc g++
+        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 60
+        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 60
+
+    - name: Verify GCC version
+      run: gcc --version
+
+    - name: Build project
+      run: make
     
     - name: Checkout
       uses: actions/checkout@main
