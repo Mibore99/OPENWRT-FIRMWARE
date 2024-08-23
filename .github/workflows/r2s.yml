@@ -39,6 +39,19 @@ jobs:
 
     steps:
     
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Update and upgrade all packages
+      run: |
+        sudo apt-get update -y
+        sudo apt-get upgrade -y
+        sudo apt-get dist-upgrade -y
+        sudo apt-get autoremove -y
+        sudo apt-get clean
+
+    - name: Verify system update
+      run: sudo apt-get update && sudo apt-get upgrade --dry-run
     
     - name: Checkout
       uses: actions/checkout@main
