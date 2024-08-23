@@ -18,4 +18,6 @@
 #done
 #curl -L -o feeds/packages/lang/golang/golang/Makefile https://github.com/openwrt/packages/raw/master/lang/golang/golang/Makefile
 #svn export https://github.com/openwrt/packages/raw/master/lang/golang/golang/Makefile feeds/packages/lang/golang/golang/Makefile --force
-wget -O feeds/packages/lang/golang/golang/Makefile https://github.com/coolsnowwolf/packages/raw/master/lang/golang/golang/Makefile
+#wget -O feeds/packages/lang/golang/golang/Makefile https://github.com/coolsnowwolf/packages/raw/master/lang/golang/golang/Makefile
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
