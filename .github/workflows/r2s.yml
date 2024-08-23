@@ -39,31 +39,6 @@ jobs:
 
     steps:
     
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Add GCC PPA and install latest GCC
-      run: |
-        # 添加PPA源
-        sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-        sudo apt-get update
-        
-        # 安装最新版本的GCC（例如GCC 13）
-        sudo apt-get install -y gcc-13 g++-13
-        
-        # 配置 update-alternatives 使用 GCC 13
-        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 60
-        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 60
-
-    - name: Select GCC 13 as default
-      run: |
-        sudo update-alternatives --set gcc /usr/bin/gcc-13
-        sudo update-alternatives --set g++ /usr/bin/g++-13
-
-    - name: Verify GCC version
-      run: gcc --version
-
-    
     
     - name: Checkout
       uses: actions/checkout@main
