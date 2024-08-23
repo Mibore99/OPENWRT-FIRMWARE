@@ -63,8 +63,7 @@ jobs:
     - name: Verify GCC version
       run: gcc --version
 
-    - name: Build project
-      run: make
+    
     
     - name: Checkout
       uses: actions/checkout@main
