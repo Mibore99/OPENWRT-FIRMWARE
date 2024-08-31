@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.101.1/g' package/base-files/files/bin/config_generate
+# sed -i 's/192.168.1.1/192.168.101.1/g' package/base-files/files/bin/config_generate
 #mkdir -p package/helloworld
 #for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
 #  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
