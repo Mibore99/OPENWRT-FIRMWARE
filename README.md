@@ -1,4 +1,4 @@
-This project builds X86 OpenWrt firmware.
+
 
 [Build X86 OpenWrt](https://github.com/Mibore99/openwrt-x86/releases)
 
