@@ -1,23 +1,2 @@
-#!/bin/bash
-#
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part2.sh
-# Description: OpenWrt DIY script part 2 (After Update feeds)
-#
-
-# Modify default IP
-# sed -i 's/192.168.1.1/192.168.101.1/g' package/base-files/files/bin/config_generate
-#mkdir -p package/helloworld
-#for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
-#  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
-#done
 curl -L -o feeds/packages/lang/golang/golang/Makefile https://github.com/openwrt/packages/raw/master/lang/golang/golang/Makefile
-#svn export https://github.com/openwrt/packages/raw/master/lang/golang/golang/Makefile feeds/packages/lang/golang/golang/Makefile --force
-#wget -O feeds/packages/lang/golang/golang/Makefile https://github.com/coolsnowwolf/packages/raw/master/lang/golang/golang/Makefile
-#rm -rf feeds/packages/lang/golang
-#git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+
