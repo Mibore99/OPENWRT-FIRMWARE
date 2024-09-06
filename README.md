@@ -1,5 +1,6 @@
-
-
-[Build OpenWrt](https://github.com/Mibore99/openwrt-x86/releases)
-
-基于原版openwrt，固件每日同步最新代码
+## 固件下载 [![](https://img.shields.io/badge/-编译状态及下载链接-FFFFFF.svg)](#固件下载-)
+点击下表中 [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?style=flat&logo=hack-the-box)](https://github.com/Mibore99/openwrt-x86/releases) 即可跳转到该设备固件下载页面
+| 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
+| :-------------: | :-------------: | :-------------: | :-------------: |
+| [![](https://img.shields.io/badge/OpenWrt-X86_64位-32C955.svg?logo=openwrt)](https://github.com/Mibore99/openwrt-x86/blob/main/.github/workflows/x86.yml) | [![](https://github.com/Mibore99/openwrt-x86/actions/workflows/x86.yml/badge.svg)](https://github.com/Mibore99/openwrt-x86/actions/workflows/x86.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/openwrt-x86/blob/main/x86.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/openwrt-x86/releases/tag/X86_64) |
+| [![](https://img.shields.io/badge/OpenWrt-R2S-32C955.svg?logo=openwrt)](https://github.com/Mibore99/openwrt-x86/blob/main/.github/workflows/r2s.yml) | [![](https://github.com/Mibore99/openwrt-x86/actions/workflows/r2s.yml/badge.svg)](https://github.com/Mibore99/openwrt-x86/actions/workflows/r2s.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/openwrt-x86/blob/main/r2s.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/openwrt-x86/releases/tag/r2s) |
