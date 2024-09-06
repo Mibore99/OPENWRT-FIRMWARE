@@ -1,6 +1,6 @@
-<img src="https://img.shields.io/github/downloads/Mibore99/OPENWRT-FIRMWARE/total.svg?style=for-the-badge&color=32C955"/>
-<img src="https://img.shields.io/github/stars/Mibore99/OPENWRT-FIRMWARE.svg?style=for-the-badge&color=orange"/>
-<img src="https://img.shields.io/github/forks/Mibore99/OPENWRT-FIRMWARE.svg?style=for-the-badge&color=ff69b4"/>
+<img src="https://img.shields.io/github/downloads/Mibore99/OPENWRT-FIRMWARE/total.svg?style=for-the-badge&color=32C955"/>&nbsp;
+<img src="https://img.shields.io/github/stars/Mibore99/OPENWRT-FIRMWARE.svg?style=for-the-badge&color=orange"/>&nbsp;
+<img src="https://img.shields.io/github/forks/Mibore99/OPENWRT-FIRMWARE.svg?style=for-the-badge&color=ff69b4"/>&nbsp;
 <img src="https://img.shields.io/github/license/Mibore99/OPENWRT-FIRMWARE.svg?style=for-the-badge&color=blueviolet"/>
 
 
