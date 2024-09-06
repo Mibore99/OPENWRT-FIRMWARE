@@ -36,3 +36,13 @@
 - **本人不对任何人因使用本固件所遭受的任何理论或实际的损失承担责任！**
 
 - **本固件禁止用于任何商业用途，请务必严格遵守国家互联网使用相关法律规定！**
+
+
+
+
+
+
+
+
+---
+This project is based on [Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt), which is licensed under the MIT License.
