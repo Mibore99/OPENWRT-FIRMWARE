@@ -21,7 +21,7 @@
 
 | 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
 | :-------------: | :-------------: | :-------------: | :-------------: |
-| [![](https://img.shields.io/badge/OpenWrt-AX6000-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/blob/main/.github/workflows/Redmi-AX6000-hanwckf.yml) | [![](https://github.com/Mibore99/OpenWrt_redmi_ax6000/actions/workflows/Redmi-AX6000-hanwckf.yml/badge.svg)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/actions/workflows/Redmi-AX6000-hanwckf.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/blob/main/Redmi-AX6000-hanwckf.yml) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/releases/tag/Redmi-AX6000) |
+| [![](https://img.shields.io/badge/OpenWrt-AX6000-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/blob/main/.github/workflows/Redmi-AX6000-hanwckf.yml) | [![](https://github.com/Mibore99/OpenWrt_redmi_ax6000/actions/workflows/Redmi-AX6000-hanwckf.yml/badge.svg)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/actions/workflows/Redmi-AX6000-hanwckf.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/blob/main/hanwckf/Redmi-AX6000/.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OpenWrt_redmi_ax6000/releases/tag/Redmi-AX6000) |
 
 
 - 基于hanwckf-immortalwrt-mt798x编译
