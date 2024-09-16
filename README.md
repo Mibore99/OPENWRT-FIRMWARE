@@ -12,6 +12,7 @@
 | :-------------: | :-------------: | :-------------: | :-------------: |
 | [![](https://img.shields.io/badge/OpenWrt-X86_64位-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/.github/workflows/x86.yml) | [![](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/x86.yml/badge.svg)](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/x86.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/x86.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OPENWRT-FIRMWARE/releases/tag/x86) |
 | [![](https://img.shields.io/badge/OpenWrt-r2s-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/r2s/.github/workflows/r2s.yml) | [![](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/r2s.yml/badge.svg)](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/r2s.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/r2s/r2s.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OPENWRT-FIRMWARE/releases/tag/r2s) |
+| [![](https://img.shields.io/badge/OpenWrt-AX6000-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/.github/workflows/redmi_ax6000_openwrt.yml) | [![](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/redmi_ax6000_openwrt.yml/badge.svg)](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/redmi_ax6000_openwrt.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/redmi_ax6000_openwrt.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OPENWRT-FIRMWARE/releases/tag/redmi_ax6000_openwrt) |
 
 - 基于官方openwrt-23.05编译
 - 固件默认IP：192.168.1.1 默认密码：password
@@ -27,7 +28,12 @@
 - 基于hanwckf-immortalwrt-mt798x编译
 - 固件默认IP：192.168.1.1 默认密码：password
 
+| 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
+| :-------------: | :-------------: | :-------------: | :-------------: |
+| [![](https://img.shields.io/badge/OpenWrt-AX6000-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/.github/workflows/redmi_ax6000.yml) | [![](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/redmi_ax6000.yml/badge.svg)](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/redmi_ax6000.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/redmi_ax6000.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OPENWRT-FIRMWARE/releases/tag/redmi_ax6000) |
 
+- 基于coolsnowwolf/lede编译
+- 固件默认IP：192.168.1.1 默认密码：password
 
 ## 特别提示 [![](https://img.shields.io/badge/-个人免责声明-FFFFFF.svg)](#特别提示-)
 
