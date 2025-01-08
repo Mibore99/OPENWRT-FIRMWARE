@@ -15,7 +15,7 @@
 | [![](https://img.shields.io/badge/OpenWrt-AX6000-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/.github/workflows/redmi_ax6000_openwrt.yml) | [![](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/redmi_ax6000_openwrt.yml/badge.svg)](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/redmi_ax6000_openwrt.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/redmi_ax6000_openwrt.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OPENWRT-FIRMWARE/releases/tag/redmi_ax6000_openwrt) |
 | [![](https://img.shields.io/badge/OpenWrt-AC2100-32C955.svg?logo=openwrt)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/.github/workflows/ac2100.yml) | [![](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/ac2100.yml/badge.svg)](https://github.com/Mibore99/OPENWRT-FIRMWARE/actions/workflows/ac2100.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/Mibore99/OPENWRT-FIRMWARE/blob/main/ac2100.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/Mibore99/OPENWRT-FIRMWARE/releases/tag/ac2100) |
 
-- 基于官方openwrt-23.05编译
+- 基于原版openwrt编译
 - 固件默认IP：192.168.1.1 默认密码：password
 
 
