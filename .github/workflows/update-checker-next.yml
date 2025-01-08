@@ -1,4 +1,4 @@
-name: Update Checker
+name: Update Checker Next
 
 env:
   REPO_URL: https://github.com/fw876/helloworld
