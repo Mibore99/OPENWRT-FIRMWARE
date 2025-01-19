@@ -11,12 +11,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Delete all tags
-        run: |
-          git fetch --tags
-          git tag -l | xargs git tag -d
-          git push --delete origin $(git tag -l)
+      - name: Set up GitHub CLI
+        uses: actions/setup-github-cli@v1
 
       - name: Delete all releases
         run: |
-          curl -X DELETE -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases
+          gh release list --all | awk '{print $1}' | while read -r release; do
+            echo "Deleting release: $release"
+            gh release delete "$release" -y
+          done
+
+      - name: Delete all tags
+        run: |
+          git fetch --tags
+          git tag -l | while read -r tag; do
+            echo "Deleting tag: $tag"
+            git tag -d "$tag"
+            git push --delete origin "$tag"
+          done
