@@ -1,0 +1,22 @@
+name: Delete All Releases and Tags
+
+on:
+  workflow_dispatch: # 手动触发工作流
+
+jobs:
+  delete-releases-and-tags:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Delete all tags
+        run: |
+          git fetch --tags
+          git tag -l | xargs git tag -d
+          git push --delete origin $(git tag -l)
+
+      - name: Delete all releases
+        run: |
+          curl -X DELETE -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases
