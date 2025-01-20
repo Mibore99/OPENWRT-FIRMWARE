@@ -39,8 +39,8 @@ jobs:
          dotnet: true
          haskell: true
          large-packages: false
-         docker-images: false
-         swap-storage: true  
+         docker-images: true
+         swap-storage: false
     
     - name: Initialization environment
       env:
