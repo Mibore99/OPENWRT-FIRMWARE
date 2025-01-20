@@ -38,8 +38,8 @@ jobs:
          android: true
          dotnet: true
          haskell: true
-         large-packages: true
-         #docker-images: true
+         large-packages: flase
+         docker-images: true
          swap-storage: true    
     
     - name: Initialization environment
@@ -48,7 +48,6 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo apt-get install -y libncurses-dev
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
