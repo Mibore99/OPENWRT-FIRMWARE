@@ -38,9 +38,9 @@ jobs:
          android: true
          dotnet: true
          haskell: true
-         large-packages: flase
+         large-packages: false
          docker-images: true
-         swap-storage: true    
+         swap-storage: true  
     
     - name: Initialization environment
       env:
