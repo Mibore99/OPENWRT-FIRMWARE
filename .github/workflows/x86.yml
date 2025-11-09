@@ -131,6 +131,9 @@ jobs:
           cd openwrt
           echo "Start compiling with $(nproc) threads"
           
+          unset CI
+          unset GITHUB_ACTIONS
+          
           export RUST_BACKTRACE=1
           export RUSTFLAGS="-C target-cpu=native"
           
