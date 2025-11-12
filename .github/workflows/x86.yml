@@ -131,7 +131,6 @@ jobs:
           cd openwrt
           echo "Start compiling with $(nproc) threads"
           
-          # 移除 CI 环境变量以避免 Rust 编译问题
           unset CI
           unset GITHUB_ACTIONS
           
