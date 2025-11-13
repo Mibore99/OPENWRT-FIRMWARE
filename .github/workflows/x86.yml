@@ -68,6 +68,16 @@ jobs:
             libxml2-dev libxslt-dev libyaml-libyaml-perl \
             clang-format clang-tidy
           
+          # 安装 Go 1.25+ (从官方下载最新版本)
+          GO_VERSION="1.25.0"
+          wget -q https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz
+          sudo rm -rf /usr/local/go
+          sudo tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
+          rm go${GO_VERSION}.linux-amd64.tar.gz
+          echo "export PATH=\$PATH:/usr/local/go/bin" >> $GITHUB_ENV
+          export PATH=$PATH:/usr/local/go/bin
+          go version
+          
           sudo timedatectl set-timezone "${{ env.TZ }}"
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
@@ -131,6 +141,7 @@ jobs:
           cd openwrt
           echo "Start compiling with $(nproc) threads"
           
+          # 移除 CI 环境变量以避免 Rust 编译问题
           unset CI
           unset GITHUB_ACTIONS
           
