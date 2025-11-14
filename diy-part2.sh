@@ -1,2 +1,1 @@
-#curl -L -o feeds/packages/lang/golang/golang/Makefile https://github.com/openwrt/packages/raw/master/lang/golang/golang/Makefile
-
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.82.0/g' feeds/packages/lang/rust/Makefile
