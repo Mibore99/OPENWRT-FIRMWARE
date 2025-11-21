@@ -1,4 +1,4 @@
-Name: x86
+name: x86
 
 on:
   repository_dispatch:
