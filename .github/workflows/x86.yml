@@ -1,13 +1,8 @@
-name: x86
+Name: x86
 
 on:
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
@@ -71,7 +66,6 @@ jobs:
           sudo timedatectl set-timezone "${{ env.TZ }}"
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
-          df -hT
 
       - name: Cache OpenWrt packages
         uses: actions/cache@v3
@@ -84,7 +78,6 @@ jobs:
         run: |
           git clone ${{ env.REPO_URL }} -b ${{ env.REPO_BRANCH }} openwrt
           ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-          df -hT $PWD
 
       - name: Load custom feeds
         run: |
@@ -122,32 +115,23 @@ jobs:
           cd openwrt
           make defconfig
           make download -j8
-          find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
 
       - name: Compile the firmware
         id: compile
         run: |
           cd openwrt
-          echo "Start compiling with $(nproc) threads"
+          echo "Start compiling..."
           
           unset CI
           unset GITHUB_ACTIONS
-          
           export RUST_BACKTRACE=1
           export RUSTFLAGS="-C target-cpu=native"
           
+          # 尝试多线程编译，如果失败则尝试单线程
           if ! make -j$(nproc); then
             echo "Multi-thread compilation failed, trying single thread..."
-            if ! make -j1; then
-              echo "Single thread compilation failed, trying with verbose mode..."
-              make -j1 V=s 2>&1 | tee build.log
-              if [ ${PIPESTATUS[0]} -ne 0 ]; then
-                echo "Compilation completely failed, last 100 lines of log:"
-                tail -100 build.log
-                exit 1
-              fi
-            fi
+            make -j1 V=s
           fi
           
           echo "status=success" >> $GITHUB_OUTPUT
@@ -156,10 +140,6 @@ jobs:
             echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
           fi
           echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
-
-      - name: Check space usage
-        if: always()
-        run: df -hT
 
       - name: Upload bin directory
         uses: actions/upload-artifact@main
@@ -215,15 +195,3 @@ jobs:
           delete_tags: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload build log on failure
-        uses: actions/upload-artifact@main
-        if: failure() && steps.compile.conclusion == 'failure'
-        with:
-          name: build-log-${{ env.FILE_DATE }}
-          path: openwrt/build.log
-
-      - name: Cleanup workspace
-        if: always()
-        run: |
-          sudo rm -rf /workdir
