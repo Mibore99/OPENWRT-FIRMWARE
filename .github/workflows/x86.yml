@@ -71,7 +71,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: openwrt/dl
-          key: ${{ runner.os }}-openwrt-dl-${{ hashFiles('openwrt/feeds.conf.default') }}
+          key: ${{ runner.os }}-openwrt-dl-${{ hashFiles('feeds.conf.default') }}
 
       - name: Clone source code
         working-directory: /workdir
@@ -124,7 +124,7 @@ jobs:
           cd openwrt
           echo "Start compiling..."
           
-          if ! make -j$(nproc); then
+          if ! make -j$(nproc) > /dev/null 2>&1; then
             echo "Multi-thread compilation failed, trying single thread..."
             make -j1 V=s
           fi
