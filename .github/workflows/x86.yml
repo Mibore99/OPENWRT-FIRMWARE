@@ -125,7 +125,10 @@ jobs:
           
           unset CI
           unset GITHUB_ACTIONS
+          export RUST_BACKTRACE=1
+          export RUSTFLAGS="-C target-cpu=native"
           
+          # 尝试多线程编译，如果失败则尝试单线程
           if ! make -j$(nproc); then
             echo "Multi-thread compilation failed, trying single thread..."
             make -j1 V=s
