@@ -124,6 +124,9 @@ jobs:
           cd openwrt
           echo "Start compiling..."
           
+          unset CI
+          unset GITHUB_ACTIONS
+          
           if ! make -j$(nproc) > /dev/null 2>&1; then
             echo "Multi-thread compilation failed, trying single thread..."
             make -j1 V=s
