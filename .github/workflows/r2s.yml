@@ -104,9 +104,16 @@ jobs:
           if [ -e files ]; then
             mv files openwrt/files
           fi
+
+          if [ "${{ env.OPENWRT_NAME }}" = "r2s" ]; then
+            echo "Device is R2S, removing rootfs-resize script..."
+            rm -f openwrt/files/etc/uci-defaults/*rootfs-resize*
+          fi
+
           if [ -e ${{ env.CONFIG_FILE }} ]; then
             mv ${{ env.CONFIG_FILE }} openwrt/.config
           fi
+          
           chmod +x ${{ env.DIY_P2_SH }}
           cd openwrt
           $GITHUB_WORKSPACE/${{ env.DIY_P2_SH }}
