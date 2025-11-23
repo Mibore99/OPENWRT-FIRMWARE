@@ -57,7 +57,7 @@ jobs:
             libglib2.0-dev xmlto qemu-utils upx-ucl \
             ccache curl libxml-parser-perl libusb-dev bin86 bcc sharutils \
             b43-fwcutter findutils grep diffutils gzip bzip2 perl \
-            python3-dev python3-setuptools python3-yaml subversion git-core \
+            python3-dev python3-setuptools python3-yaml python3-pyelftools subversion git-core \
             p7zip p7zip-full msmtp texinfo libreadline-dev \
             fakeroot zlib1g libyaml-dev \
             libxml2-dev libxslt-dev libyaml-libyaml-perl \
