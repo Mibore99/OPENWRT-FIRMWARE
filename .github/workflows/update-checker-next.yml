@@ -1,8 +1,8 @@
 name: Update Checker Next
 
 env:
-  REPO_URL: https://github.com/fw876/helloworld
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/xiaorouji/openwrt-passwall
+  REPO_BRANCH: main
 
 on:
   workflow_dispatch:
@@ -46,5 +46,5 @@ jobs:
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@v2
       with:
-        retain_days: 10
-        keep_minimum_runs: 1
+        retain_days: 60
+        keep_minimum_runs: 10
